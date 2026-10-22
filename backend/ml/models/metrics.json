@@ -1,0 +1,165 @@
+{
+  "best_classifier_name": "XGBoost",
+  "class_labels": [
+    "Monitor",
+    "Inspect",
+    "Service",
+    "Replace"
+  ],
+  "label_to_idx": {
+    "Monitor": 0,
+    "Inspect": 1,
+    "Service": 2,
+    "Replace": 3
+  },
+  "idx_to_label": {
+    "0": "Monitor",
+    "1": "Inspect",
+    "2": "Service",
+    "3": "Replace"
+  },
+  "numeric_features": [
+    "vehicle_age_years",
+    "odometer_km",
+    "km_since_last_replacement",
+    "days_since_last_replacement",
+    "avg_coolant_temp",
+    "avg_rpm",
+    "hard_braking_score",
+    "active_dtc_count",
+    "replacement_interval_km",
+    "past_replacement_count"
+  ],
+  "categorical_features": [
+    "component_type",
+    "usage_pattern"
+  ],
+  "all_feature_names": [
+    "vehicle_age_years",
+    "odometer_km",
+    "km_since_last_replacement",
+    "days_since_last_replacement",
+    "avg_coolant_temp",
+    "avg_rpm",
+    "hard_braking_score",
+    "active_dtc_count",
+    "replacement_interval_km",
+    "past_replacement_count",
+    "component_type_Air Filter",
+    "component_type_Battery",
+    "component_type_Brake Fluid",
+    "component_type_Brake Pads",
+    "component_type_Clutch/Transmission Fluid",
+    "component_type_Coolant",
+    "component_type_Engine Oil",
+    "component_type_Oil Filter",
+    "component_type_Spark Plugs",
+    "component_type_Timing Belt",
+    "component_type_Tires",
+    "usage_pattern_City",
+    "usage_pattern_Highway",
+    "usage_pattern_Mixed"
+  ],
+  "classifier_metrics": {
+    "Decision Tree": {
+      "accuracy": 0.835,
+      "precision": 0.8359,
+      "recall": 0.835,
+      "f1_weighted": 0.8351,
+      "confusion_matrix": [
+        [
+          912,
+          101,
+          1,
+          0
+        ],
+        [
+          99,
+          880,
+          94,
+          4
+        ],
+        [
+          1,
+          169,
+          393,
+          103
+        ],
+        [
+          0,
+          8,
+          146,
+          1489
+        ]
+      ]
+    },
+    "Random Forest": {
+      "accuracy": 0.8505,
+      "precision": 0.8455,
+      "recall": 0.8505,
+      "f1_weighted": 0.8389,
+      "confusion_matrix": [
+        [
+          936,
+          78,
+          0,
+          0
+        ],
+        [
+          87,
+          924,
+          41,
+          25
+        ],
+        [
+          0,
+          160,
+          284,
+          222
+        ],
+        [
+          0,
+          3,
+          42,
+          1598
+        ]
+      ]
+    },
+    "XGBoost": {
+      "accuracy": 0.885,
+      "precision": 0.8828,
+      "recall": 0.885,
+      "f1_weighted": 0.8834,
+      "confusion_matrix": [
+        [
+          948,
+          66,
+          0,
+          0
+        ],
+        [
+          65,
+          936,
+          75,
+          1
+        ],
+        [
+          0,
+          116,
+          443,
+          107
+        ],
+        [
+          0,
+          2,
+          74,
+          1567
+        ]
+      ]
+    }
+  },
+  "rul_metrics": {
+    "mae_km": 1114.14,
+    "r2_score": 0.9702
+  }
+}
